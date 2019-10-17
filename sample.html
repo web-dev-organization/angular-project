@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <script src="lib/angular.js"></script>
+    <script src="js/sample.js"></script>
+    <style>
+        html{
+            height: 100%;
+            width: 100%;;
+        }
+
+        .block{
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="samplecontroller">
+
+    inputText: <input type="text" ng-model="inputText"> <br/><br/>
+    {{inputText}}
+    <div ng-bind="inputText"></div>
+    
+
+    <div class="block"></div>
+
+
+    <input type="button" value="totrue" ng-click="setTrue()"/> <br/><br/>
+    <input type="button" value="toFalse" ng-click="setFalse()"/>
+    <div ng-if="ngif">show ng-if</div>
+
+    
+    
+    <div class="block"></div>
+
+    sample is:<input type="text" ng-model="sample"/><br/><br/>
+    <input type="button" value="showSample" ng-click="showSample()"/>
+
+</body>
+</html>
