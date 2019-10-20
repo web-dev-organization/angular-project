@@ -7,35 +7,44 @@
     <style>
         html{
             height: 100%;
-            width: 100%;;
+            width: 100%;
         }
 
         .block{
             margin-top: 50px;
         }
-        
+
+        .input-form div{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .word-position{
+            display: inline-block;
+            width: 150px;
+        }
     </style>
 </head>
 <body ng-app="myapp" ng-controller="samplecontroller">
 
-    inputText: <input type="text" ng-model="inputText"> <br/><br/>
-    {{inputText}}
-    <div ng-bind="inputText"></div>
-    
+<div class="input-form">
+    <div>
+        <div class="word-position">会员id：</div><input type="text" ng-model="memberId"/>
+    </div>
+    <div>
+        <div class="word-position">昵称：</div><input type="text" ng-model="memberName"/>
+    </div>
+    <div>
+        <div class="word-position">会员等级：</div><input type="text" ng-model="memberLevel"/>
+    </div>
+    <div>
+        <div class="word-position">会员加入日期：</div><input type="text" ng-model="memberCreatedDate"/>
+    </div>
+</div>
 
-    <div class="block"></div>
-
-
-    <input type="button" value="totrue" ng-click="setTrue()"/> <br/><br/>
-    <input type="button" value="toFalse" ng-click="setFalse()"/>
-    <div ng-if="ngif">show ng-if</div>
-
-    
-    
-    <div class="block"></div>
-
-    sample is:<input type="text" ng-model="sample"/><br/><br/>
-    <input type="button" value="showSample" ng-click="showSample()"/>
+<div>
+     <input type="button" value="search" ng-click="search()"/>
+</div>
 
 </body>
 </html>

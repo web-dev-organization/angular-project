@@ -2,22 +2,14 @@ var myapp = angular.module("myapp",[]);
 
 myapp.controller("samplecontroller",function($scope){
 
-    $scope.sample = "abc"
 
-    $scope.showSample = function(){
-        alert($scope.sample);
+    $scope.search = function(){
+       search();
     }
 
-
-
-
-    
-    $scope.setTrue = function(){
-        $scope.ngif = true;
+    var search = function(){
+        alert("bbbb")
     }
 
-    $scope.setFalse = function(){
-        $scope.ngif = false;
-    }
 
 });
