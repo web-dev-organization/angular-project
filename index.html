@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/angular.js"></script>
+    <script src="js/index.js"></script>
+    <title>Document</title>
+        <style>
+        
+        .input-form div{
+            margin-top: 20px;
+            margin-bottom:20px;
+
+        }
+        
+        .word-position{
+          
+          width: 113px;
+          display: inline-block;
+        }
+        
+        </style>
+
+</head>
+
+
+
+<body ng-app="myapp" ng-controller="indexcontroller">
+    <div class="input-form">
+        <div>
+           <div class="word-position" > 会员id：</div> <input type="text" ng-model="memberId">
+        </div>
+
+
+        <div>
+           <div class="word-position"> 昵称：</div> <input type="text" ng-model="memberName">
+        </div>
+        
+
+        <div>
+            <div class="word-position"> 会员等级：</div><input type="text"  ng-model="memberLevel">
+        </div>
+
+        <div>
+            <div class="word-position">  会员加入日期：</div><input type="text"  ng-model="memberCreateDate">
+        </div>
+
+       <div><input type="button" value="search" ng-click="search()"/></div>
+     
+
+    </div>
+</body>
+</html>
