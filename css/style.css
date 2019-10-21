@@ -1,0 +1,42 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+.user-list{
+    width: 98%;
+    padding-left: 1%;
+    margin-left: 1%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.user-list-btn{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: right;
+    width: 98%;
+}
+
+.input-form{
+    background: beige;
+    width: 94%;
+    padding-left: 2%;
+    margin-left: 2%;
+}
+
+.input-form div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.word-position{
+    display: inline-block;
+    width: 150px;
+}
+
+.input-error-msg{
+    display: inline-block;
+    background: pink;
+}

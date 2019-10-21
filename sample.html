@@ -2,51 +2,36 @@
 <html>
 <head>
     <meta charset="utf8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="lib/angular.js"></script>
     <script src="js/sample.js"></script>
-    <style>
-        html{
-            height: 100%;
-            width: 100%;
-        }
-
-        .block{
-            margin-top: 50px;
-        }
-
-        .input-form div{
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .word-position{
-            display: inline-block;
-            width: 150px;
-        }
-    </style>
 </head>
 <body ng-app="myapp" ng-controller="samplecontroller">
 
 <div class="input-form">
     <div>
         <div class="word-position">会员id：</div><input type="text" ng-model="memberId"/>
+        <div class="input-error-msg" ng-bind="Msg.memberIdErrorMsg"> </div>
     </div>
     <div>
         <div class="word-position">昵称：</div><input type="text" ng-model="memberName"/>
     </div>
     <div>
         <div class="word-position">会员等级：</div><input type="text" ng-model="memberLevel"/>
+        <div class="input-error-msg" ng-bind="Msg.memberLevelErrorMsg"> </div>
     </div>
     <div>
-        <div class="word-position">会员加入日期：</div><input type="text" ng-model="memberCreatedDate"/>
+        <div class="word-position">会员加入日期：</div><input type="text" ng-model="memberCreatedAt"/> ~ <input type="text" ng-model="memberCreatedTo"/>
+        <div class="input-error-msg" ng-bind="Msg.memberCreatedDateErrorMsg"> </div>
     </div>
 </div>
 
-<div>
-     <input type="button" value="search" ng-click="search()"/>
+<div class="user-list-btn">
+    <input type="button" value="清空" ng-click="clear()"/>
+    <input type="button" value="检索" ng-click="search()"/>
 </div>
 
-<table>
+<table class="user-list" ng-if="tableDisplayFlag">
     <thead>
         <tr>
             <th>No</th>
@@ -61,7 +46,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="list in mylist">
+        <tr ng-repeat="list in response.data">
             <td>
                 <div ng-bind="list.No"></div>
             </td>
@@ -84,10 +69,13 @@
                 <div ng-bind="list.memberCreatedAt"></div>
             </td>
             <td>
-                <div ng-bind="list.memberStatus"></div>
+                <div ng-bind="showMemberLevel(list.memberLevel)"></div>
             </td>
             <td>
-                <div></div>
+                <div>
+                    <input type="button" value="升级" ng-click=""/>
+                    <input type="button" value="降级" ng-click=""/>
+                </div>
             </td>
         </tr>
     </tbody>

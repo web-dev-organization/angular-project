@@ -49,59 +49,56 @@
     </div>
 
 
-        <table>
+<table>
 
-            <thead>
-               
-                 <tr>
-                    <th>No</th>
-                    <th>会员id</th>
-                    <th>昵称</th>
-                    <th>邮箱</th>
-                    <th>电话号码</th>
-                    <th>地址</th>
-                    <th>会员加入日期</th>
-                    <th>会员状态</th>
-                    <th>状态变更</th>
-                </tr>
-
-            </thead>
+    <thead>
+         <tr>
+                        <th>No</th>
+                        <th>会员id</th>
+                        <th>昵称</th>
+                        <th>邮箱</th>
+                        <th>电话号码</th>
+                        <th>地址</th>
+                        <th>会员加入日期</th>
+                        <th>会员状态</th>
+                        <th>状态变更</th>
+        </tr>
+    </thead>
 
 
-         <tbody>
-                    <tr ng-repeat="list in mylist">
-                        <td>
-                            <div ng-bind="list.No"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.memberId"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.memberName"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.mailAddress"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.phoneNum"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.place"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.memberCreatedAt"></div>
-                        </td>
-                        <td>
-                            <div ng-bind="list.memberStatus"></div>
-                        </td>
-                        <td>
-                            <div></div>
-                        </td>
-                    </tr>
-                </tbody>
+<tbody>
+                <tr ng-repeat="list in mylist">
+                            <td>
+                                <div ng-bind="list.No"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.memberId"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.memberName"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.mailAddress"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.phoneNum"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.place"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.memberCreatedAt"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="list.memberStatus"></div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                </tr>
+</tbody>
 
-        
-        </table>
+</table>
 
 
   
